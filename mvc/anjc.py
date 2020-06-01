@@ -2,7 +2,7 @@ import random
 #u model ide sva komunikcija s bazom podataka ili nečim što simulira bazu podataka poput liste u ovom slućaju 
 class AnjcModel:
     def __init__(self):
-        self._SPIL =  self.SPIL = {'2': 2, '3':3, '4': 4, '5':5, '6':6, '7':7, '8':8, '9':9, '0':10, 'Decko':10, 'Dama':10, 'Kralj': 10, 'Kec':1}
+        self._SPIL = {'2': 2, '3':3, '4': 4, '5':5, '6':6, '7':7, '8':8, '9':9, '0':10, 'Decko':10, 'Dama':10, 'Kralj': 10, 'Kec':1}
 
     @property
     def SPIL(self):
@@ -16,7 +16,7 @@ class AnjcModel:
         return deck 
 #u view ide sve ono što korisnik vidi(gumbovi i slićno)
 class AnjcView:
-      def display_title_bar(self):
+    def display_title_bar(self):
         print("\t********************************************")
         print("\t***  Anjc - Razvoj poslovnih aplikacija  ***")
         print("\t********************************************")
@@ -103,7 +103,7 @@ class AnjcControler:
        
     
 if __name__ == '__main__':
-    game = AnjcControler(AnjcModel, AnjcView)
+    game = AnjcControler(AnjcModel(), AnjcView())
     game.play()
             
                     
